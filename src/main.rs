@@ -2,6 +2,7 @@ fn main() {
     print_result();
     print_result_with_label();
     conditional_loops_with_while();
+    looping_through_collection_with_for();
 }
 
 // returning values from loops
@@ -49,6 +50,33 @@ fn conditional_loops_with_while(){
     while number != 0 {
         println!("{}!", number);
         number -= 1;
+    }
+    println!("LIFTOFF!!!");
+}
+
+// looping through a collection with for
+fn looping_through_collection_with_for(){
+    let a = [10, 20, 30, 40, 50];
+    let mut index = 0;
+
+    // this is a while loop in disguise
+    //* this is more error prone and also slower than the for loop below
+    while index < 5 {
+        println!("the value is: {}", a[index]);
+        index += 1;
+    }
+
+    // this is the same as above
+    //* this is safer and faster than the while loop above
+    //* this is also more concise
+    for element in a.iter(){
+        println!("the value is: {}", element);
+    }
+
+    // this is the same as above
+    //? this generates a range from 1 to 3, then reverses it
+    for number in (1..4).rev(){
+        println!("{}!", number);
     }
     println!("LIFTOFF!!!");
 }
