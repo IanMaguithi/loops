@@ -1,6 +1,7 @@
 fn main() {
     print_result();
     print_result_with_label();
+    conditional_loops_with_while();
 }
 
 // returning values from loops
@@ -39,4 +40,15 @@ fn print_result_with_label(){
         count += 1;
     }
     println!("End count = {}", count);
+}
+
+// conditional loops with while
+fn conditional_loops_with_while(){
+    let mut number = 3;
+
+    while number != 0 {
+        println!("{}!", number);
+        number -= 1;
+    }
+    println!("LIFTOFF!!!");
 }
